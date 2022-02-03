@@ -10,6 +10,9 @@ const Line = ({ emoji, index }) => {
       key={index}
       onMouseEnter={() => setHoverLine(true)}
       onMouseLeave={() => setHoverLine(false)}
+      onClick={() => {
+        navigator.clipboard.writeText(emoji.symbol);
+      }}
     >
       <div>{emoji.symbol}</div>
       <div>{emoji.title}</div>
